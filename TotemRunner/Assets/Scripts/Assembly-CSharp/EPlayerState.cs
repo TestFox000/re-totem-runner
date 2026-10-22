@@ -1,0 +1,27 @@
+public enum EPlayerState
+{
+	manRun = 0,
+	manAction = 1,
+	manDeath = 2,
+	manFall = 3,
+	manGround = 4,
+	manGroundAction = 5,
+	manThorn = 6,
+	manDying = 7,
+	eagleFly = 8,
+	eagleDown = 9,
+	eagleDeath = 10,
+	eagleUp = 11,
+	boarRun = 12,
+	boarPrepare = 13,
+	boarAttack = 14,
+	boarFall = 15,
+	boarGround = 16,
+	boarSpeedup = 17,
+	boarDeath = 18,
+	starFly = 19,
+	starDeath = 20,
+	ghostStart = 21,
+	ghostFly = 22,
+	Quantity = 23
+}

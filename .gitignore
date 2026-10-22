@@ -1,0 +1,55 @@
+# ===== Unity 生成物（任意深度）=====
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emory/
+/[Mm]etata/
+
+# ===== 构建产物 =====
+*.apk
+*.aab
+*.unitypackage
+*.apks
+*.keystore
+*.jks
+*.mobileprovision
+*.p12
+
+# ===== 日志 =====
+*.log
+*.pid
+sysinfo.txt
+
+# ===== 编辑器 / IDE =====
+.idea/
+.vs/
+*.csproj
+*.sln
+*.user
+
+# ===== 工作区过程产物（本地保留，不入仓库）=====
+/Analysis/
+/Recovery/
+/run_logcat.txt
+/TotemRunner/DSH/_proto/
+/TotemRunner/DSH/reports/
+/TotemRunner/DSH/cards/
+
+# ===== 临时文件 =====
+*.tmp
+*.bak
+*.orig
+_tmp*
+_survey*.ps1
+_scan.ps1
+
+# ===== 补充：嵌套工程与 Python 缓存 =====
+[Uu]ser[Ss]ettings/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

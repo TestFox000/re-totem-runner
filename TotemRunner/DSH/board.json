@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "description": "DSH 通用任务映射；由父 Agent单写。预置卡尚未在 DSH 执行。",
+  "updated_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "project_relative_to_workspace": "TotemRunner",
+  "current_milestone": "M1",
+  "active_run_id": "run-20261021-14",
+  "artifacts": {
+    "historical_gameplay_verified": {
+      "sha256": "7e16ebfe79fd503bea49b6951c634ea642515c7b6e92dc9631a5088652ab6fb0",
+      "size_bytes": 203355262,
+      "apk_copy_path": null,
+      "report_relative_to_workspace": "Analysis/TotemRunner/final-apk-validation.json",
+      "scope": "Tutorial, eagle/boar/flying, B01_Lv_01, death/respawn; not all levels",
+      "warning": "历史报告原路径已被实验版本覆盖；该哈希 APK 副本未定位",
+      "search_note": "2026-10-20 在 workspace / Desktop / Downloads（depth<=4）扫描未定位该哈希 APK 副本；不得声称可回退。"
+    },
+    "candidate": {
+      "sha256": "d91af7a0a08c47a21449680f422b7beac5bd3123a60b2b31b9697f5bfe1d21ab",
+      "size_bytes": 187846003,
+      "path_relative_to_workspace": "TotemRunner/Builds/TotemRunner-ARM64.apk",
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261021-14/candidate/TotemRunner-ARM64.apk",
+      "source_run_id": "run-20261021-14",
+      "validation_status": "installed_coldstart_ok_pending_human_popup_check",
+      "note": "run-14：死亡/宝石引导弹窗 Death.jpg 中文化 + Buy Gems→购买宝石(18 场景) + OK→确定(2 处) + 灵体变身局内恒 999 可用；APK 内串/图核验通过；真机 60.0-60.7 fps、0 Unity 异常"
+    },
+    "previous_candidate_run13": {
+      "sha256": "5bc0708c94b65f0428ffe77ac4c5c1168005ca95ca087bf908480a148e78e9cf",
+      "size_bytes": 187828315,
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261021-13/candidate/TotemRunner-ARM64.apk",
+      "source_run_id": "run-20261021-13",
+      "note": "TR-013 字体竖直修正版；回退用"
+    },
+    "previous_candidate_run12": {
+      "sha256": "1615b9bea5ae274f221396146479c5a3f1545908c4458fe8a53029a6f0324044",
+      "size_bytes": 187828295,
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261021-12/candidate/TotemRunner-ARM64.apk",
+      "source_run_id": "run-20261021-12",
+      "note": "ZCOOL 快乐体 0.9×，但 CJK 整体低一个字身（one ascent）；回退用"
+    },
+    "last_verified_release": null,
+    "previous_candidate_run01": {
+      "sha256": "3173464cb67776e26211dbd93033e6bdd74a655ac0281317bc2fa013655ccf98",
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261020-01/candidate/TotemRunner-ARM64.apk",
+      "note": "视频黑屏实验版，回退用"
+    },
+    "cjk_font_pilot": {
+      "sha256": "6a094eee8bf9dc1bd45993898606591ed4997e8859deea6d3fd627e121a7aa2a",
+      "size_bytes": 207086613,
+      "path_relative_to_workspace": "TotemRunner/Builds/TotemRunner-ARM64.apk",
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261020-03/candidate/TotemRunner-ARM64.apk",
+      "source_run_id": "run-20261020-03",
+      "validation_status": "not_run",
+      "note": "TR-005 pilot：三套位图字体扩 CJK（1024² Alpha8，原拉丁区 1:1 保留）+ MainMenu 开始/选项/重置 + Tutorial 滑动变身；设备已安装且 base.apk 同哈希；本机截图因 PowerShell 重定向损坏，未做像素验证；候选副本已归档"
+    },
+    "previous_candidate_run03": {
+      "sha256": "6a094eee8bf9dc1bd45993898606591ed4997e8859deea6d3fd627e121a7aa2a",
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261020-03/candidate/TotemRunner-ARM64.apk",
+      "note": "试点 356 字图集版"
+    },
+    "previous_candidate_run04": {
+      "sha256": "25cc5fbfaf969f40d875edbd217b8efea0df628fb69b816a5137a0a6202904b1",
+      "note": "TR-005 v2 全量字符集字体候选"
+    },
+    "previous_candidate_run05": {
+      "sha256": "82a59ae97f1bfd570428a598908ed5f8d0b9068da43fe1af05ae5878de1aa0c1",
+      "size_bytes": 207086613,
+      "path_relative_to_workspace": "TotemRunner/Builds/TotemRunner-ARM64.apk",
+      "immutable_copy_path": "Analysis/TotemRunner/runs/run-20261021-05/candidate/TotemRunner-ARM64.apk",
+      "source_run_id": "run-20261021-05",
+      "validation_status": "partial_pass_scene_zh_menu_video",
+      "note": "TR-006 场景层 14 处 m_Text；主菜单中文+视频回归 pass；子页面待人工；运行时覆盖英文→TR-008"
+    }
+  },
+  "concurrency": {
+    "max_mutating_tasks": 2,
+    "parent_writes_index": true,
+    "unity_instances_per_project": 1,
+    "device_operators_per_serial": 1,
+    "source_freeze_required_during_build": true
+  },
+  "shared_resources": [
+    {
+      "id": "unity_project",
+      "held_by": "lead",
+      "task_id": "TR-005",
+      "session_id": null,
+      "acquired_at": null,
+      "process_id": null,
+      "note": "TR-005 暂停（用户要求，2026-10-20 22:0x）；明日继续；构建前再核实无 Unity 进程"
+    },
+    {
+      "id": "android_device_1d16aa01",
+      "held_by": "lead",
+      "task_id": null,
+      "session_id": null,
+      "acquired_at": "2026-10-20T13:21:02.876Z",
+      "process_id": null,
+      "note": "父 Agent 持有；run-05 采证结束（19:14），设备停在主菜单；禁止 adb input 注入"
+    },
+    {
+      "id": "build_outputs_and_log",
+      "held_by": "lead",
+      "task_id": "TR-005",
+      "session_id": null,
+      "acquired_at": null,
+      "process_id": null,
+      "note": "Builds/TotemRunner-ARM64.apk 当前为 6a094eee…（未归档）；明日先另存 run-20261020-03/candidate 再测试"
+    }
+  ],
+  "file_leases": [
+    {
+      "path": "TotemRunner/Assets/Font/berlin_sans_fb_demi_bold.asset",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "4caa7f9856bc5032dd3a3b8fff50c329ea7fbf712d40cc5cc46cddd887899e52",
+      "current_sha256": "fb085c73cf3902aff612fd39ca7f3eec4f0b089f984478c727cde2d9cd2cc584",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Font/berlin_sans_buymenu.asset",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "74560ce4c68a796da7cb59fa12a81a72477348b5ff0859fd40560bf22fafaaea",
+      "current_sha256": "9374dbfb36de33ec38524ce9b665281546ef0566532b22b2497665b6a0e3b133",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Font/LithosPro-Black.asset",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "8fd8231350becc79bce0242c8663eb932716a7b07b0a3f123cba318815f04c8c",
+      "current_sha256": "2e5e0f13582d60d103777bea24249469cc107584f12b653bb00e67a9dcc15987",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Texture2D/Font Texture.texture2D",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "1995ff9722922b3766fd8276f7c2e0e2b5c38d1057409046ab19b20b1aaade11",
+      "current_sha256": "1e858ae2992c4973b228e88e5a22f659ce2bc8d416543c6db38be676801cfff8",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Texture2D/Font Texture_0.texture2D",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "7a6955458f2396054e55605397e9b272b12af7356c8aa8032e066b4861d8a411",
+      "current_sha256": "8db81d966844683c1d3ea4c61052a084a86691ddb7aa881b2857ecc6641a2f84",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Texture2D/Font Texture_1.texture2D",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "e77e719614090aedc20c13eb96e1ed176f818c23c14ec43623daaf38d348869d",
+      "current_sha256": "44061c8b640acda5039a94500a2045f7a2e2f628c78749a2b37dd027046d296e",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Levels/MainMenu.unity",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "3ae56519eaa874c82d584d3790db8ff06d9ee13eca1811df1dba91b3d90c39e8",
+      "current_sha256": "9eb26505850b89c7850e89026c13228a70b87f0b0edd2bf0a92df7232f98bee9",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Levels/Block_00_(Tutorial)/Tutorial.unity",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-20T21:50:00+08:00",
+      "base_sha256": "bc9c473af23232a79850c5fb218aa9f0bac0d2357b5d8b3e80e9c252c382b7cd",
+      "current_sha256": "e4b7f4d3f7b7245c017b8443df58d45fdc4bdb83a6ac5d7ded07be7196ee136a",
+      "frozen_for_build": false,
+      "note": "TR-005 pilot 修改；原件备份在 Analysis/TotemRunner/runs/run-20261020-03/backup/"
+    },
+    {
+      "path": "TotemRunner/Assets/Font/{berlin_sans_fb_demi_bold,berlin_sans_buymenu,LithosPro-Black}.asset + Assets/Texture2D/Font Texture{,_0,_1}.texture2D + Assets/Levels/{MainMenu,Block_00_(Tutorial)/Tutorial}.unity",
+      "task_id": "TR-005",
+      "owner": "lead",
+      "session_id": "lead",
+      "acquired_at": "2026-10-21T18:53:00+08:00",
+      "base_sha256": "run-20261020-03/backup（原始）",
+      "current_sha256": "见 run-20261021-04/apply-log.json",
+      "frozen_for_build": false
+    },
+    {
+      "path": "TotemRunner/Assets/Levels/",
+      "task_id": "TR-008",
+      "owner": "localization",
+      "session_id": "localization",
+      "acquired_at": "2026-10-21T19:35:00+08:00",
+      "note": "phase2：20 份场景内嵌 GameSettings（blockName/18 关卡名/52 成就 name+descr）+ 22 条 ShowMessageTrigger + helpMessageText；仅显示串，备份 run-20261021-07/backup"
+    },
+    {
+      "path": "TotemRunner/Assets/Scripts/Assembly-CSharp/GuiGameHud.cs",
+      "task_id": "TR-008",
+      "owner": "localization",
+      "session_id": "localization",
+      "acquired_at": "2026-10-21T19:35:00+08:00",
+      "note": "仅 L1258 显示字面量"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TR-001",
+      "title": "固定候选基线、归档和回退能力",
+      "milestone": "M0",
+      "priority": "P0",
+      "status": "done",
+      "suggested_role": "Integrator + QA",
+      "dsh_task_id": "task-1",
+      "parent_task_id": null,
+      "owner": "lead",
+      "attempt": 1,
+      "base_run_id": "run-20261020-01",
+      "depends_on": [],
+      "card": "cards/TR-001.md",
+      "reviewer": "qa",
+      "report_path": "TotemRunner/DSH/reports/TR-001/1/RESULT.md",
+      "blocker": null,
+      "note": "QA 独立复核 pass（G0 范围）；F-01~F-06 已修复；残留 N-01~N-05 为记录级（P3），冻结文件不原地修改。"
+    },
+    {
+      "id": "TR-002",
+      "title": "清点全部可见文本、字体与嵌字资源",
+      "milestone": "M1",
+      "priority": "P1",
+      "status": "done",
+      "suggested_role": "Localization",
+      "dsh_task_id": "task-2",
+      "parent_task_id": null,
+      "owner": "localization",
+      "attempt": 1,
+      "base_run_id": "run-20261020-01",
+      "depends_on": [],
+      "card": "cards/TR-002.md",
+      "reviewer": "qa",
+      "report_path": "TotemRunner/DSH/reports/TR-002/1/RESULT.md",
+      "blocker": null,
+      "note": "QA 复核 pass（附条件，P3×8 文档级）：991/250/4/23/74/544 行数、分类合计 991、187 词条、20 份配置字节一致、14 图=10 有英文+4 图标、字体 95/254/95/CJK=0 均已独立重算；报告 §2/§3 数字口径、payload md5、1 条 evidence 指向、字体/atlas 字节链、CSV BOM 为 errata（数据层不受影响）。"
+    },
+    {
+      "id": "TR-003",
+      "title": "验证并修复原版启动动画",
+      "milestone": "M1",
+      "priority": "P0",
+      "status": "waiting_device",
+      "suggested_role": "Runtime；QA 独立审查",
+      "dsh_task_id": "task-3",
+      "parent_task_id": null,
+      "owner": "runtime",
+      "attempt": 1,
+      "base_run_id": "run-20261020-01",
+      "depends_on": [
+        "TR-001"
+      ],
+      "card": "cards/TR-003.md",
+      "reviewer": "qa",
+      "report_path": "TotemRunner/DSH/reports/TR-003/1/RESULT.md",
+      "blocker": null,
+      "note": "Patch C 真机 V01-a pass（QA 用 cv2 逐帧比对 29/30 截图像素一致，音频 maxAmplitude 13.5k-20.8k）；V01-b/V02/V03/V04/P01-P03 not_run，等人工操作；整体不得标 done，V01 不得整体 pass。"
+    },
+    {
+      "id": "TR-004",
+      "title": "统一奇幻语气、术语和操作文案",
+      "milestone": "M1",
+      "priority": "P1",
+      "status": "done",
+      "suggested_role": "Localization；QA 校对语义",
+      "dsh_task_id": "task-4",
+      "parent_task_id": null,
+      "owner": "localization",
+      "attempt": 2,
+      "base_run_id": "run-20261020-02",
+      "depends_on": [
+        "TR-002"
+      ],
+      "card": "cards/TR-004.md",
+      "reviewer": "qa",
+      "report_path": "TotemRunner/DSH/reports/TR-004/2/RESULT.md",
+      "blocker": null,
+      "note": "attempt 2 验收通过：zh-CN.csv 187/187、426 汉字并集、校验 0 错；记录级 errata 见 REVIEW。"
+    },
+    {
+      "id": "TR-005",
+      "title": "中文字体与旧 UI 的最小真机试点",
+      "milestone": "M1",
+      "priority": "P1",
+      "status": "done",
+      "suggested_role": "Localization / Typography",
+      "dsh_task_id": "task-5",
+      "parent_task_id": null,
+      "owner": "lead",
+      "attempt": 2,
+      "base_run_id": "run-20261021-04",
+      "depends_on": [
+        "TR-001",
+        "TR-004"
+      ],
+      "card": "cards/TR-005.md",
+      "reviewer": "qa",
+      "report_path": "Analysis/TotemRunner/runs/run-20261021-04/validation.json",
+      "blocker": null,
+      "note": "全量字符集 v2 字体（547/701/547）真机 pass（run-04）；菜单中文渲染完整、视频回归通过。"
+    },
+    {
+      "id": "TR-006",
+      "title": "菜单与设置汉化接入",
+      "milestone": "M2",
+      "priority": "P1",
+      "status": "waiting_device",
+      "suggested_role": "Localization",
+      "dsh_task_id": "task-6",
+      "parent_task_id": null,
+      "owner": "localization",
+      "attempt": 1,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-005"
+      ],
+      "card": "cards/TR-006.md",
+      "reviewer": "qa",
+      "report_path": "TotemRunner/DSH/reports/TR-006/1/RESULT.md",
+      "blocker": null,
+      "note": "场景层 14 处 m_Text 复核通过；run-05/06 真机；TR-008 phase 2 已并；L04 子页面人工项待用户"
+    },
+    {
+      "id": "TR-007",
+      "title": "教学文字与图片嵌字接入",
+      "milestone": "M2",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "Localization / Art",
+      "dsh_task_id": "task-7",
+      "parent_task_id": null,
+      "owner": "localization",
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-005"
+      ],
+      "card": "cards/TR-007.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-008",
+      "title": "补齐章节、HUD、结算及其他可见文本",
+      "milestone": "M2",
+      "priority": "P1",
+      "status": "running",
+      "suggested_role": "Localization",
+      "dsh_task_id": "task-8",
+      "parent_task_id": null,
+      "owner": "localization",
+      "attempt": 2,
+      "base_run_id": "run-20261021-05",
+      "depends_on": [
+        "TR-005"
+      ],
+      "card": "cards/TR-008.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null,
+      "note": "phase 1/2 完成并已构建（run-08）；phase 3（GUIText/Arial、TOS、图片）待定；真机验收待用户"
+    },
+    {
+      "id": "TR-009",
+      "title": "验收中文测试版与基本玩法闭环",
+      "milestone": "M2",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "QA；Integrator 构建/设备",
+      "dsh_task_id": "task-9",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-003",
+        "TR-006",
+        "TR-007",
+        "TR-008"
+      ],
+      "card": "cards/TR-009.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-010",
+      "title": "核实存档与 Android 生命周期",
+      "milestone": "M3",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "Runtime；QA 操作设计",
+      "dsh_task_id": "task-10",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-001"
+      ],
+      "card": "cards/TR-010.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-011",
+      "title": "按章节完成全关卡与 Boss 覆盖",
+      "milestone": "M3",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "QA；Runtime 按缺陷卡修复",
+      "dsh_task_id": "task-11",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-009",
+        "TR-010"
+      ],
+      "card": "cards/TR-011.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-012",
+      "title": "修正有证据的触控、宽屏与音画体验问题",
+      "milestone": "M3",
+      "priority": "P2",
+      "status": "backlog",
+      "suggested_role": "Runtime 或 Localization，按文件分卡",
+      "dsh_task_id": "task-12",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-009",
+        "TR-010"
+      ],
+      "card": "cards/TR-012.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-013",
+      "title": "测量性能与原版表现差异",
+      "milestone": "M3",
+      "priority": "P2",
+      "status": "backlog",
+      "suggested_role": "QA + Runtime",
+      "dsh_task_id": "task-13",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-011",
+        "TR-012"
+      ],
+      "card": "cards/TR-013.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-014",
+      "title": "独立验收最终候选",
+      "milestone": "M3",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "QA；Integrator 串行构建",
+      "dsh_task_id": "task-14",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-011",
+        "TR-012",
+        "TR-013"
+      ],
+      "card": "cards/TR-014.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    },
+    {
+      "id": "TR-015",
+      "title": "冻结可持续交付与下一轮入口",
+      "milestone": "M3",
+      "priority": "P1",
+      "status": "backlog",
+      "suggested_role": "Integrator；QA 清点",
+      "dsh_task_id": "task-15",
+      "parent_task_id": null,
+      "owner": null,
+      "attempt": 0,
+      "base_run_id": null,
+      "depends_on": [
+        "TR-014"
+      ],
+      "card": "cards/TR-015.md",
+      "reviewer": "qa",
+      "report_path": null,
+      "blocker": null
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-20",
+      "event": "设计初始化；核对当前 APK 哈希；未执行游戏构建/安装/验收，也未创建 DSH 原生卡"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:13",
+      "event": "run-20261020-01 建立：候选 APK 归档（3173464c…，207,070,478 bytes，设备 base.apk 同哈希）；源快照 4950 文件 / 267,796,742 bytes（missing 0, mismatch 0）；原版 APK 108ffbdb… 完好；历史 7e16… 副本未定位；未构建、未真机验收"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:13",
+      "event": "按 DSH 通用任务卡机制建立 15 张原生卡（task-1…task-15）并写入 dsh_task_id；localization 执行 TR-002、runtime 诊断 TR-003、qa 复核 TR-001"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:21",
+      "event": "TR-003 E1 真机冷启动两轮：视频解码 30.2s 全程黑屏（每秒截图 17033B），结束时进菜单；无 [IngameVideoPlayer] 警告；APK 3173464c…；证据 runs/run-20261020-01/logs/tr-003-e1-evidence.json"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:23",
+      "event": "TR-001 经 QA 复核 pass（G0）标 done；原生 task-1 completed；TR-003 解除阻塞进入实现"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:25",
+      "event": "TR-002 交付 PARTIAL（187 可翻译唯一词条）进入 review；TR-003 Patch C 实现完成（fe4232de…），源写入冻结，开始构建 run-20261020-02"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:29",
+      "event": "run-20261020-02 构建成功：APK 62564f93…，真机冷启动 55s 截图+logcat 证明启动视频 30.4s 完整可见（原片画面）并正常进菜单；音频/跳过/后台/玩法冒烟 not_run"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:34",
+      "event": "QA 复核：TR-002 pass（附条件，P3×8）；TR-003 V01-a pass、整体 not_run → waiting_device；TR-004 术语表启动"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:49",
+      "event": "TR-004 attempt 1 交付并复核：glossary 169（35/13/4/24/41/52）、charset 340 汉字、样句 30、validate 0 错误；发现缺卡要求的 zh-CN.csv 初稿"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:50",
+      "event": "TR-004 attempt 2 派发：187 条 zh-CN.csv + 字符集并集 + 扩展校验；术语/专名/空价格等 9 项裁决下发"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:52",
+      "event": "TR-005 字体方案实施：生成三套 1024² Alpha8 图集（NotoSansSC-VF；原拉丁区 1:1，UV 按比例缩放），备份原件到 run-20261020-03/backup，应用字体/贴图并改 MainMenu 三按钮 + Tutorial 滑动变身"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:55",
+      "event": "构建 run-20261020-03：APK 6a094eee…（207,086,613 B），sharedassets 增约 3 MB（三张图集），设备安装并拉取 base.apk 同哈希"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "21:58",
+      "event": "截图捕获失败：PowerShell 5.1 重定向损坏 PNG（2.68 MB 无效文件）；需改用 screencap+pull 重拍"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "22:02",
+      "event": "用户要求暂停工作，明日继续；localization 子 Agent 被中断（attempt 2 未完成）"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "16:28",
+      "event": "恢复：screencap+pull 重拍成功；冷启动 16:28:18，12s 视频画面/42s Loading/50s 主菜单；主菜单显示开始/选项/重置（CJK pass），logcat 视频 30.654s 完整；installed base.apk=6a094eee… 同哈希"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "16:31",
+      "event": "run-03 证据落盘（validation.json/README/screenshot-index）；localization 续跑 attempt 2 收口"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "16:35",
+      "event": "用户再次要求暂停；localization 已中断。attempt 2 半成品在 reports/TR-004/2/（zh-CN.csv 187 行 + charset 427 并集 + diff），缺 RESULT.md 与校验记录；设备停在主菜单"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "18:58",
+      "event": "TR-004 attempt 2 验收 done；TR-005 v2 全量字符集（436 汉字）字体重生成→构建 run-04（25cc5fbf…）→安装→真机菜单/视频 pass；task-4 completed"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "19:14",
+      "event": "TR-006 场景层验收：run-05 构建 82a59ae9…、安装、冷启动采证；主菜单中文+视频回归 pass；logcat UTF-16 坑记录（PowerShell 重定向）；派 TR-008 attempt 1"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "19:35",
+      "event": "TR-008 phase1 验收：run-06 构建 28a765aa…、安装、冷启动；主菜单商店中文+视频回归 pass、0 Unity 错误；派 phase2"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "20:35",
+      "event": "用户反馈5项 → run-11：陀螺比例映射、按钮触摸锁存+命中区放大、CJK字高1.0x、解锁全章节、羽蛇变身x999（不扣宝石）"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "20:45",
+      "event": "用户反馈：字号再小些+换圆体 → ZCOOL KuaiLe 0.9×，构建 run-12 1615b9be…，已装设备"
+    }
+  ],
+  "updated_at": "2026-10-20T13:13:08.699Z",
+  "native_task_board": {
+    "tool": "DSH shared team task board (team_task_create)",
+    "mapping_note": "每张卡一条原生任务；dsh_task_id 记录在 tasks[].dsh_task_id；子 Agent 认领后不得自行标 completed。",
+    "created_at": "2026-10-20T13:13:08.699Z"
+  }
+}
