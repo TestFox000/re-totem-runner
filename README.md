@@ -14,6 +14,20 @@
 - **模块化场景**：开场动画、主菜单、关卡（Block_01–04 / Titan_Race / Stone_Enemy_Level）
 - **自动化构建**：附带一套脚本化的构建 / 设备验证流水线
 
+## 截图展示
+
+### 启动画面
+![启动画面](screenshots/device-startup.png)
+
+### 主菜单（中文界面）
+![主菜单](screenshots/device-integrated-MainMenu.png)
+
+### 教程引导
+![教程](screenshots/device-tutorial-current.png)
+
+### 游戏中
+![游戏中](screenshots/device-playable-final.png)
+
 ## 技术栈
 
 | 项 | 说明 |
@@ -42,6 +56,7 @@ UnityAndroidTest/
 │   └── DSH/              # 构建 / 验证自动化脚本与状态
 ├── Analysis/             # 逆向与调试产出（证据 / 素材来源），体积大，默认不入仓库
 ├── Recovery/             # 导出工程备份，默认不入仓库
+├── screenshots/          # 游戏截图展示
 └── Tools/                # 宿主工具
 ```
 
